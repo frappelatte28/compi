@@ -28,6 +28,18 @@ public:
         Name = name;
     }
 };
+class Dancer:User {
+    public:
+    string FvrtDanceStyle;
+    Dancer(int age, string name, string fvrtDanceStyle)
+        :User(age, name)
+    {
+      FvrtDanceStyle = fvrtDanceStyle;
+    }
+     void dance(){
+        cout<<"this is my fvrt dance style" <<" "<<FvrtDanceStyle << endl;
+    }
+};
 
 int main(){
     User user1 = User(20,"Pragya");
@@ -36,4 +48,7 @@ int main(){
 
     User user2 = User(21, "Divyanshu");
     user2.IntroduceYourself();
+
+    Dancer d = Dancer(20, "Pragya", "Bollywood");
+    d.dance();
 }
